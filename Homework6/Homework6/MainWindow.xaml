@@ -1,0 +1,46 @@
+﻿<Window x:Class="Homework6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Homework6"
+        mc:Ignorable="d"
+        Title="Платонов Даниил, УТС-21, 8" Height="450" Width="800">
+    <Grid Background="#FFF2F3FF">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="lbEmployees" Margin="10,110,10,100" SelectionMode="Extended"/>
+        <Label Content="Новый сотрудник:" HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="tbSalary" HorizontalAlignment="Left" Margin="13,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Зарплата:" HorizontalAlignment="Left" Margin="13,44,0,0" VerticalAlignment="Top" FontSize="14" BorderThickness="0,0,0,0"/>
+        <Label Content="Стаж (полных лет):" HorizontalAlignment="Left" Margin="169,44,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="tbExperience" HorizontalAlignment="Left" Margin="169,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Отдел:" HorizontalAlignment="Left" Margin="334,44,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Button x:Name="btnAdd" Content="Добавить" Margin="0,77,10,0" VerticalAlignment="Top" Background="White" Height="18" VerticalContentAlignment="Center" Padding="1,-1,1,1" BorderThickness="1,1,1,1" Click="btnAdd_Click" HorizontalAlignment="Right" Width="76"/>
+        <Button x:Name="btnDelete" Content="Удалить" Margin="0,0,10,63" Background="White" VerticalContentAlignment="Center" Padding="1,-1,1,1" BorderThickness="1,1,1,1" Click="btnDelete_Click" HorizontalAlignment="Right" Width="76" Height="18" VerticalAlignment="Bottom"/>
+        <ComboBox x:Name="cbDepartment" HorizontalAlignment="Left" Margin="334,75,0,0" VerticalAlignment="Top" Width="120" BorderBrush="White" >
+            <ComboBoxItem Content="маркетинга" />
+            <ComboBoxItem Content="разработки" />
+            <ComboBoxItem Content="бухгалтерии"/>
+        </ComboBox>
+        <Label Content="Должность:" HorizontalAlignment="Left" Margin="499,44,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <ComboBox x:Name="cbPost" HorizontalAlignment="Left" Margin="499,75,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem x:Name="iCleaner" Content="уборщик"/>
+            <ComboBoxItem x:Name="iManager" Content="менеджер"/>
+            <ComboBoxItem x:Name="iProgrammer" Content="программист"/>
+            <ComboBoxItem x:Name="iDirector" Content="директор"/>
+        </ComboBox>
+        <Label Content="Выберите отдел:" HorizontalAlignment="Left" Margin="10,0,0,66" FontSize="14" Height="29" VerticalAlignment="Bottom"/>
+        <ComboBox x:Name="cbDepartment_2" HorizontalAlignment="Left" Margin="13,0,0,39" Width="120" BorderBrush="White" SelectionChanged="cbDepartment_2_SelectionChanged" Height="22" VerticalAlignment="Bottom" >
+            <ComboBoxItem Content="маркетинга" />
+            <ComboBoxItem Content="разработки" />
+            <ComboBoxItem Content="бухгалтерии"/>
+            <ComboBoxItem Content="все отделы"/>
+        </ComboBox>
+        <TextBox x:Name="tbAverageSalary" HorizontalAlignment="Left" IsReadOnly="True" Margin="183,0,0,39" TextWrapping="Wrap" Width="167" Height="20" VerticalAlignment="Bottom"/>
+        <Label Content="Средняя з\п по отделу:" HorizontalAlignment="Left" Margin="183,0,0,66" FontSize="14" Height="29" VerticalAlignment="Bottom"/>
+        <Label Content="Средний срок стажа по фирме:" HorizontalAlignment="Left" Margin="408,0,0,66" FontSize="14" Height="29" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="tbAverageExperience" HorizontalAlignment="Left" IsReadOnly="True" Margin="408,0,0,39" TextWrapping="Wrap" Width="133" Height="20" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>
